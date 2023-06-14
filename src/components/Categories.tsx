@@ -46,6 +46,7 @@ export default function Categories(props: CategoriesProps) {
       <label className="landing-label-heading">Categories</label>
 
       <select
+        className="categories-select"
         value={props.categoryId}
         onChange={(e) => {
           props.handleCategoryChange(parseInt(e.target.value));

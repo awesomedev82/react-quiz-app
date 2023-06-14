@@ -20,27 +20,29 @@ export default function Landing(props: LandingProps) {
           Open Trivia Database
         </a>
       </h4>
-      <label htmlFor="no-of-questions" className="landing-label">
-        <div className="landing-label-heading">Number of questions</div>
-        <input
-          type="number"
-          id="no-of-questions"
-          name="numberOfQuestions"
-          min={min}
-          max={max}
-          value={props.numberOfQuestions}
-          onChange={(e) =>
-            props.handleNumberOfQuestions(Number(e.target.value))
-          }
+      <div className="landing-input-container">
+        <label htmlFor="no-of-questions" className="landing-label">
+          <div className="landing-label-heading">Number of questions</div>
+          <input
+            type="number"
+            id="no-of-questions"
+            name="numberOfQuestions"
+            min={min}
+            max={max}
+            value={props.numberOfQuestions}
+            onChange={(e) =>
+              props.handleNumberOfQuestions(Number(e.target.value))
+            }
+          />
+          <small>
+            min({min}) - max({max})
+          </small>
+        </label>
+        <Categories
+          handleCategoryChange={props.handleCategoryChange}
+          categoryId={props.categoryId}
         />
-        <small>
-          min({min}) - max({max})
-        </small>
-      </label>
-      <Categories
-        handleCategoryChange={props.handleCategoryChange}
-        categoryId={props.categoryId}
-      />
+      </div>
       <button
         className="start-button"
         onClick={() => props.handleQuizShow(true)}

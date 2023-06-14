@@ -23,13 +23,28 @@
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
 }
-.categories-contaier > select {
+
+.categories-select {
   grid-column: span 2;
 }
+.landing-input-container {
+  padding: 1rem;
+  margin: 1rem;
+  display: grid;
+  grid-column: span 2;
+  grid-template-rows: repeat(auto-fill, 1fr);
+  backdrop-filter: blur(70%);
+}
+
+@media (max-width: 550px) {
+  .categories-select {
+    max-width: 10rem;
+  }
+}
+
 .landing-label-heading {
   font-weight: bold;
   grid-column: span 2;
-  border-bottom: 1px solid white;
 }
 .landing-label > input {
   grid-column: span 2;
@@ -67,6 +82,8 @@ main {
 }
 .svg-logo-container {
   overflow: hidden;
+  max-width: 100vw;
+  max-height: 100vh;
 }
 .blob-logo-top-right {
   position: absolute;
@@ -261,6 +278,7 @@ button[disabled]:hover {
 }
 
 @media (prefers-color-scheme: light) {
+  .landing-input-container,
   .question-title {
     box-shadow: -2px 4px 6px 0px rgba(61, 61, 61, 0.6);
   }
@@ -318,11 +336,14 @@ button[disabled]:hover {
   .error-message {
     color: red;
   }
-  .landing-label-heading {
-    border-bottom: 1px solid rgb(20, 19, 19);
+  @media (min-width: 450px) {
+    .landing-label-heading {
+      border-bottom: 1px solid rgb(20, 19, 19);
+    }
   }
 }
 @media (prefers-color-scheme: dark) {
+  .landing-input-container,
   .question-title {
     background: rgba(39, 39, 39, 0.774);
     box-shadow: -2px 4px 6px 0px #02020299;
@@ -377,7 +398,9 @@ button[disabled]:hover {
   .error-message {
     color: red;
   }
-  .landing-label-heading {
-    border-bottom: 1px solid rgb(255, 255, 255);
+  @media (min-width: 450px) {
+    .landing-label-heading {
+      border-bottom: 1px solid rgb(255, 255, 255);
+    }
   }
 }
