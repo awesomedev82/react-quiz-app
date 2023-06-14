@@ -13,7 +13,6 @@ import {
 import PuffLoader from "react-spinners/PuffLoader";
 import { Score } from "../models/Score";
 import { QuizResponseDto } from "../models/QuizResponseDto";
-import { CSSTransition } from "react-transition-group";
 
 export default function Quiz(props: QuizProps) {
   const [quizQuestions, setQuizQuestions] = useState<QuizQuestion[]>([]);
@@ -28,7 +27,6 @@ export default function Quiz(props: QuizProps) {
     correctAnswers: 0,
     percentage: 0,
   });
-  console.log(currentPage);
   const questionsPerPage = 1;
   const hasPreviousPage = currentPage === 0;
   const hasNextPage =
@@ -220,15 +218,7 @@ export default function Quiz(props: QuizProps) {
             size={100}
           />
         ) : (
-          <CSSTransition
-            key={currentPage}
-            in={true}
-            appear={true}
-            timeout={500}
-            classNames="fade"
-          >
-            <div>{quizElements}</div>
-          </CSSTransition>
+          quizElements
         )}
         <div className="page-number">
           Question: {currentPage + 1} of{" "}

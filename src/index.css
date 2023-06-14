@@ -55,14 +55,7 @@ button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
-.fade-enter {
-  opacity: 0;
-}
 
-.fade-enter-active {
-  opacity: 1;
-  transition: opacity 500ms;
-}
 @media (prefers-color-scheme: light) {
   :root {
     color: #0c0f13;
