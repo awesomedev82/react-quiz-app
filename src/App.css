@@ -18,8 +18,21 @@
   grid-column: span 2;
 }
 .landing-label {
-  display: flex;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
+}
+.landing-label-heading {
+  font-weight: bold;
+  grid-column: span 2;
+  border-bottom: 1px solid white;
+}
+.landing-label > input {
+  grid-column: span 2;
+}
+.landing-label > small {
+  grid-column: span 2;
 }
 .react-logo {
   animation: logo-spin infinite 20s linear;
@@ -273,6 +286,9 @@ button[disabled]:hover {
   .error-message {
     color: red;
   }
+  .landing-label-heading {
+    border-bottom: 1px solid rgb(20, 19, 19);
+  }
 }
 @media (prefers-color-scheme: dark) {
   .answer-input:checked + .answer-label {
@@ -322,5 +338,8 @@ button[disabled]:hover {
   }
   .error-message {
     color: red;
+  }
+  .landing-label-heading {
+    border-bottom: 1px solid rgb(255, 255, 255);
   }
 }

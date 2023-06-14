@@ -8,7 +8,7 @@ import "./App.css";
 
 function App() {
   const [isShowingQuiz, setIsShowingQuiz] = useState(false);
-  const [numberOfQuestions, setNumberOfQuestions] = useState(6);
+  const [numberOfQuestions, setNumberOfQuestions] = useState(5);
   const handleQuizShow = (show: boolean) => {
     setIsShowingQuiz(show);
   };

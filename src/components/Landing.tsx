@@ -25,7 +25,7 @@ export default function Landing(props: LandingProps) {
         </a>
       </h4>
       <label htmlFor="no-of-questions" className="landing-label">
-        Number of questions:
+        <div className="landing-label-heading">Number of questions</div>
         <input
           type="number"
           id="no-of-questions"
