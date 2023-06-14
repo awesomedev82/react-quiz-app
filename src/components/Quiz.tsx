@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { QuizQuestion } from "./QuizQuestion";
-import { QuizAnswer } from "./QuizAnswer";
+import { QuizQuestion } from "../models/QuizQuestion";
+import { QuizAnswer } from "../models/QuizAnswer";
 import { decode } from "he";
 import { QuestionCard } from "./QuestionCard";
 import { nanoid } from "nanoid";
@@ -11,6 +11,9 @@ import {
   faRotateLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import PuffLoader from "react-spinners/PuffLoader";
+import { Score } from "../models/Score";
+import { QuizResponseDto } from "../models/QuizResponseDto";
+import { CSSTransition } from "react-transition-group";
 
 export default function Quiz(props: QuizProps) {
   const [quizQuestions, setQuizQuestions] = useState<QuizQuestion[]>([]);
@@ -25,8 +28,8 @@ export default function Quiz(props: QuizProps) {
     correctAnswers: 0,
     percentage: 0,
   });
-
-  const questionsPerPage = 5;
+  console.log(currentPage);
+  const questionsPerPage = 1;
   const hasPreviousPage = currentPage === 0;
   const hasNextPage =
     currentPage === Math.ceil(quizQuestions.length / questionsPerPage) - 1;
@@ -53,6 +56,9 @@ export default function Quiz(props: QuizProps) {
       ...prevAnswers,
       [answer.questionId]: answer,
     }));
+    setTimeout(() => {
+      handleNextPage();
+    }, 200); // 1000ms delay
   }
   const setQuizFromApi = async (isCancelled: boolean) => {
     try {
@@ -214,11 +220,19 @@ export default function Quiz(props: QuizProps) {
             size={100}
           />
         ) : (
-          quizElements
+          <CSSTransition
+            key={currentPage}
+            in={true}
+            appear={true}
+            timeout={500}
+            classNames="fade"
+          >
+            <div>{quizElements}</div>
+          </CSSTransition>
         )}
         <div className="page-number">
-          Page: {currentPage + 1} of{" "}
-          {Math.ceil(quizQuestions.length / questionsPerPage)} pages
+          Question: {currentPage + 1} of{" "}
+          {Math.ceil(quizQuestions.length / questionsPerPage)}
         </div>
       </div>
       <div className="button-group">
@@ -267,21 +281,7 @@ export default function Quiz(props: QuizProps) {
     </div>
   );
 }
-interface Score {
-  totalQuestions: number;
-  correctAnswers: number;
-  percentage: number;
-}
 type QuizProps = {
   handleQuizShow: (show: boolean) => void;
   numberOfQuestions: number;
-};
-type QuizResponseDto = {
-  id: string;
-  category: string;
-  type: string;
-  difficulty: string;
-  question: string;
-  correct_answer: string;
-  incorrect_answers: string[];
 };
