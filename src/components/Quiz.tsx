@@ -62,7 +62,9 @@ export default function Quiz(props: QuizProps) {
     try {
       if (!isCancelled) {
         const response = await fetch(
-          `https://opentdb.com/api.php?amount=${props.numberOfQuestions}`
+          `https://opentdb.com/api.php?amount=${props.numberOfQuestions}${
+            props.categoryId === -1 ? "" : `&category=${props.categoryId}`
+          }`
         );
         const responseData = await response.json();
         if (responseData.response_code !== 0) {
@@ -274,4 +276,5 @@ export default function Quiz(props: QuizProps) {
 type QuizProps = {
   handleQuizShow: (show: boolean) => void;
   numberOfQuestions: number;
+  categoryId: number;
 };

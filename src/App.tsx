@@ -9,11 +9,15 @@ import "./App.css";
 function App() {
   const [isShowingQuiz, setIsShowingQuiz] = useState(false);
   const [numberOfQuestions, setNumberOfQuestions] = useState(5);
+  const [categoryId, setCategoryId] = useState(-1);
   const handleQuizShow = (show: boolean) => {
     setIsShowingQuiz(show);
   };
   const handleNumberOfQuestions = (num: number) => {
     setNumberOfQuestions(num);
+  };
+  const handleCategoryChange = (categoryId: number) => {
+    setCategoryId(categoryId);
   };
   return (
     <>
@@ -22,12 +26,15 @@ function App() {
           <Quiz
             handleQuizShow={handleQuizShow}
             numberOfQuestions={numberOfQuestions}
+            categoryId={categoryId}
           />
         ) : (
           <LandingPage
             handleQuizShow={handleQuizShow}
             numberOfQuestions={numberOfQuestions}
             handleNumberOfQuestions={handleNumberOfQuestions}
+            handleCategoryChange={handleCategoryChange}
+            categoryId={categoryId}
           />
         )}
         <div className="svg-logo-container">

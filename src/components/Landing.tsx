@@ -1,18 +1,21 @@
 import reactLogo from "../assets/react.svg";
+import Categories from "./Categories";
 type LandingProps = {
   handleQuizShow: (show: boolean) => void;
   numberOfQuestions: number;
   handleNumberOfQuestions: (numberOfQuestions: number) => void;
+  handleCategoryChange: (categoryId: number) => void;
+  categoryId: number;
 };
 
 export default function Landing(props: LandingProps) {
   const [min, max] = [1, 50];
+
   return (
     <div className="landing-container">
       <h1 className="landing-title">
-        React
-        <img className="react-logo" src={reactLogo} /> <br />
         Quizz Site
+        <img className="react-logo" src={reactLogo} />
       </h1>
       <h4 className="landing-description">
         Random quizzes from{" "}
@@ -41,7 +44,10 @@ export default function Landing(props: LandingProps) {
           min({min}) - max({max})
         </small>
       </label>
-
+      <Categories
+        handleCategoryChange={props.handleCategoryChange}
+        categoryId={props.categoryId}
+      />
       <button
         className="start-button"
         onClick={() => props.handleQuizShow(true)}

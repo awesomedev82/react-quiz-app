@@ -16,11 +16,15 @@
 .landing-description {
   grid-column: span 2;
 }
+.categories-contaier,
 .landing-label {
   display: grid;
   justify-items: center;
   grid-template-columns: 1fr 1fr;
   gap: 0.5rem;
+}
+.categories-contaier > select {
+  grid-column: span 2;
 }
 .landing-label-heading {
   font-weight: bold;
@@ -30,6 +34,7 @@
 .landing-label > input {
   grid-column: span 2;
 }
+
 .landing-label > small {
   grid-column: span 2;
 }
@@ -121,6 +126,9 @@ main {
 }
 .page-next {
   justify-self: start;
+}
+.start-button {
+  grid-column: span 2;
 }
 
 .submit-button,
