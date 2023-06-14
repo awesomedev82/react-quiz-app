@@ -1,0 +1,85 @@
+{
+  "response_code": 0,
+  "results": [
+    {
+      "category": "Science & Nature",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which psychological term refers to the stress of holding contrasting beliefs?",
+      "correct_answer": "Cognitive Dissonance",
+      "incorrect_answers": ["Flip-Flop Syndrome", "Split-Brain", "Blind Sight"]
+    },
+    {
+      "category": "Entertainment: Music",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Which of these artists do NOT originate from France?",
+      "correct_answer": "The Chemical Brothers",
+      "incorrect_answers": ["Air", "Justice", "Daft Punk"]
+    },
+    {
+      "category": "Entertainment: Music",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "Madonna&#039;s song &quot;Hung Up&quot; includes a piece from which popular 70s song?",
+      "correct_answer": "Gimmie! Gimmie! Gimme! (A Man After Midnight)",
+      "incorrect_answers": ["Staying Alive", "Night Fever", "The Chain"]
+    },
+    {
+      "category": "Geography",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which of the following Arab countries does NOT have a flag containing only Pan-Arab colours?",
+      "correct_answer": "Qatar",
+      "incorrect_answers": ["Kuwait", "United Arab Emirates", "Jordan"]
+    },
+    {
+      "category": "Celebrities",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "How much weight did Chris Pratt lose for his role as Star-Lord in &quot;Guardians of the Galaxy&quot;?",
+      "correct_answer": "60 lbs",
+      "incorrect_answers": ["30 lbs", "50 lbs", "70 lbs"]
+    },
+    {
+      "category": "Entertainment: Television",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "Which of these in the Star Trek series is NOT Klingon food?",
+      "correct_answer": "Hors d&#039;oeuvre",
+      "incorrect_answers": ["Racht", "Gagh", "Bloodwine"]
+    },
+    {
+      "category": "History",
+      "type": "multiple",
+      "difficulty": "easy",
+      "question": "Which country was Josef Stalin born in?",
+      "correct_answer": "Georgia",
+      "incorrect_answers": ["Russia", "Germany", "Poland"]
+    },
+    {
+      "category": "Science & Nature",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "In human biology, a circadium rhythm relates to a period of roughly how many hours?",
+      "correct_answer": "24",
+      "incorrect_answers": ["8", "16", "32"]
+    },
+    {
+      "category": "General Knowledge",
+      "type": "multiple",
+      "difficulty": "medium",
+      "question": "What is the highest number of Michelin stars a restaurant can receive?",
+      "correct_answer": "Three",
+      "incorrect_answers": ["Four", "Five", "Six"]
+    },
+    {
+      "category": "Entertainment: Video Games",
+      "type": "multiple",
+      "difficulty": "hard",
+      "question": "GoldenEye 007 on the Nintendo 64 was planned to allow you to play as all previous Bond actors, with the exception of who?",
+      "correct_answer": "George Lazenby",
+      "incorrect_answers": ["Roger Moore", "Sean Connery", "Timothy Dalton"]
+    }
+  ]
+}
