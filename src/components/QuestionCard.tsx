@@ -67,11 +67,6 @@ export const QuestionCard = (props: QuestionCardProps) => {
                 key={answer.id}
                 htmlFor={answer.id}
               >
-                {/* <span className="answer-text">
-                  Lorem ipsum dolor sit amet,
-                  consectetursdasdasdasdasdasdsdsdsdsdsdsddsdsdsdsdsdsdsdsdconsectetursdasdasdasdasdasdsdsdsdsdsdsddsdsdsdsdsdsdsdsd
-                  adipisicing elit. Natus Lorem, ipsum dolor.
-                </span> */}
                 <span className="answer-text">{answer.answerText}</span>
               </label>
               <div>{props.answersSubmitted && renderIcon(answer)}</div>

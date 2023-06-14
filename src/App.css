@@ -163,11 +163,6 @@ main {
 }
 
 .answer-label {
-  /* box-sizing: border-box; */
-  /* border: 0.8px solid #4d5b9e; */
-  /* border-radius: 7.94239px; */
-  /* justify-items: center; */
-  /* max-width: 50px; */
   padding: 0.4rem;
   cursor: pointer;
   position: relative;
@@ -184,7 +179,7 @@ main {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   gap: 2rem;
   align-items: center;
 }
