@@ -228,7 +228,6 @@ export default function Quiz(props: QuizProps) {
           disabled={hasPreviousPage}
         >
           <FontAwesomeIcon
-            onClick={handleNextPage}
             icon={faAngleLeft}
             size="xl"
             style={{ color: `${hasPreviousPage ? "#bcff0063" : "#bcff00"}` }}
@@ -240,7 +239,6 @@ export default function Quiz(props: QuizProps) {
           disabled={hasNextPage}
         >
           <FontAwesomeIcon
-            onClick={handleNextPage}
             icon={faAngleRight}
             size="xl"
             style={{ color: `${hasNextPage ? "#bcff0063" : "#bcff00"}` }}
