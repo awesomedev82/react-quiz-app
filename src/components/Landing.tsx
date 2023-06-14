@@ -18,13 +18,13 @@ export default function Landing(props: LandingProps) {
         <img className="react-logo" src={reactLogo} />
       </h1>
       <h4 className="landing-description">
-        Random quizzes from{" "}
+        Q & A from{" "}
         <a
           href="https://opentdb.com/"
           target="_blank"
           style={{ fontSize: "1.1rem" }}
         >
-          Open trivia DB
+          Open Trivia Database
         </a>
       </h4>
       <label htmlFor="no-of-questions" className="landing-label">
