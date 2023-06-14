@@ -1,3 +1,4 @@
+import { Player } from "@lottiefiles/react-lottie-player";
 import reactLogo from "../assets/react.svg";
 import Categories from "./Categories";
 
@@ -10,6 +11,20 @@ export default function Landing(props: LandingProps) {
         Quizz Site
         <img className="react-logo" src={reactLogo} />
       </h1>
+      <Player
+        autoplay
+        loop
+        src="https://assets5.lottiefiles.com/private_files/lf30_6ocpfdil.json"
+        style={{
+          height: "300px",
+          width: "300px",
+          position: "fixed",
+          zIndex: "-1",
+          top: "-4.5rem",
+          left: "2.3rem",
+          margin: "auto",
+        }}
+      ></Player>
       <h4 className="landing-description">
         Q & A from{" "}
         <a
@@ -20,6 +35,7 @@ export default function Landing(props: LandingProps) {
           Open Trivia Database
         </a>
       </h4>
+
       <div className="landing-input-container">
         <label htmlFor="no-of-questions" className="landing-label">
           <div className="landing-label-heading">Number of questions</div>

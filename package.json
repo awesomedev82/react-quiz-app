@@ -16,6 +16,7 @@
     "@fortawesome/free-regular-svg-icons": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
+    "@lottiefiles/react-lottie-player": "^3.5.3",
     "he": "^1.2.0",
     "nanoid": "^4.0.2",
     "react": "^18.2.0",

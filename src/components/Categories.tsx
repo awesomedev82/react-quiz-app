@@ -39,12 +39,13 @@ export default function Categories(props: CategoriesProps) {
   }
 
   const selectOptionElements = categories.map((category) => (
-    <option value={category.id}>{category.name}</option>
+    <option key={category.id} value={category.id}>
+      {category.name}
+    </option>
   ));
   return (
     <div className="categories-contaier">
       <label className="landing-label-heading">Categories</label>
-
       <select
         className="categories-select"
         value={props.categoryId}
