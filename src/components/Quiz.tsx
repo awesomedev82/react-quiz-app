@@ -11,8 +11,8 @@ import {
   faRotateLeft,
 } from "@fortawesome/free-solid-svg-icons";
 import PuffLoader from "react-spinners/PuffLoader";
-import { Score } from "../models/Score";
-import { QuizResponseDto } from "../models/QuizResponseDto";
+import { Score } from "../types/Score";
+import { QuizResponseDto } from "../types/QuizResponseDto";
 
 export default function Quiz(props: QuizProps) {
   const [quizQuestions, setQuizQuestions] = useState<QuizQuestion[]>([]);
@@ -56,7 +56,7 @@ export default function Quiz(props: QuizProps) {
     }));
     setTimeout(() => {
       handleNextPage();
-    }, 200); // 1000ms delay
+    }, 200);
   }
   const setQuizFromApi = async (isCancelled: boolean) => {
     try {

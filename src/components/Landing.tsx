@@ -1,12 +1,5 @@
 import reactLogo from "../assets/react.svg";
 import Categories from "./Categories";
-type LandingProps = {
-  handleQuizShow: (show: boolean) => void;
-  numberOfQuestions: number;
-  handleNumberOfQuestions: (numberOfQuestions: number) => void;
-  handleCategoryChange: (categoryId: number) => void;
-  categoryId: number;
-};
 
 export default function Landing(props: LandingProps) {
   const [min, max] = [1, 50];
@@ -57,3 +50,10 @@ export default function Landing(props: LandingProps) {
     </div>
   );
 }
+type LandingProps = {
+  handleQuizShow: (show: boolean) => void;
+  numberOfQuestions: number;
+  handleNumberOfQuestions: (numberOfQuestions: number) => void;
+  handleCategoryChange: (categoryId: number) => void;
+  categoryId: number;
+};

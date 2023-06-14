@@ -1,5 +1,6 @@
 import { decode } from "he";
 import { useEffect, useState } from "react";
+import { QuizCategory } from "../types/QuizCategory";
 
 export default function Categories(props: CategoriesProps) {
   const allCategories = "All";
@@ -59,8 +60,4 @@ export default function Categories(props: CategoriesProps) {
 type CategoriesProps = {
   handleCategoryChange: (categoryId: number) => void;
   categoryId: number;
-};
-type QuizCategory = {
-  id: number;
-  name: string;
 };
