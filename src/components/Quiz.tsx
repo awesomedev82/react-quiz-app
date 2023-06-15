@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useRef, useEffect, useState } from "react";
 import { QuizQuestion } from "../models/QuizQuestion";
 import { QuizAnswer } from "../models/QuizAnswer";
 import { decode } from "he";
@@ -13,6 +13,7 @@ import {
 import PuffLoader from "react-spinners/PuffLoader";
 import { Score } from "../types/Score";
 import { QuizResponseDto } from "../types/QuizResponseDto";
+import Confetti from "react-confetti";
 
 export default function Quiz(props: QuizProps) {
   const [quizQuestions, setQuizQuestions] = useState<QuizQuestion[]>([]);
@@ -27,10 +28,15 @@ export default function Quiz(props: QuizProps) {
     correctAnswers: 0,
     percentage: 0,
   });
+
+  const {
+    current: [width, height],
+  } = useRef([window.innerWidth, window.innerHeight]);
   const questionsPerPage = 1;
   const hasPreviousPage = currentPage === 0;
   const hasNextPage =
     currentPage === Math.ceil(quizQuestions.length / questionsPerPage) - 1;
+
   useEffect(() => {
     let isCancelled = false;
     setQuizFromApi(isCancelled);
@@ -185,8 +191,10 @@ export default function Quiz(props: QuizProps) {
       percentage,
     });
   }
+  console.log(width, height);
   return (
     <div className="quiz-wrapper">
+      {score.percentage === 100 && <Confetti width={width} height={height} />}
       {answersSubmitted ? (
         <div className="score-text">
           <p

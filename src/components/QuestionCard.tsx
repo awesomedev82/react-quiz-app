@@ -30,6 +30,7 @@ export const QuestionCard = (props: QuestionCardProps) => {
         return answer.isCorrect ? (
           <FontAwesomeIcon
             icon={faCircleCheck}
+            className="answer-icon-correct"
             style={{
               color: "#5fe25f",
               margin: "10px 0px 0px 6px",
@@ -39,6 +40,7 @@ export const QuestionCard = (props: QuestionCardProps) => {
         ) : (
           <FontAwesomeIcon
             icon={faCircleXmark}
+            className="answer-icon-wrong"
             style={{
               color: "#ff0000",
               margin: "10px 0px 0px 4px",

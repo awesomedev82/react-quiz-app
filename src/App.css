@@ -278,6 +278,14 @@ button[disabled]:hover {
     opacity: 1;
   }
 }
+.answer-icon-correct {
+  animation: popIn 0.3s linear 1;
+}
+@keyframes popIn {
+  50% {
+    transform: scale(2);
+  }
+}
 
 @media (prefers-color-scheme: light) {
   .landing-input-container,
