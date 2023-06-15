@@ -99,14 +99,7 @@ main {
   left: -150px;
   z-index: -2;
 }
-.blog-logo-top-wave {
-  position: absolute;
-  margin: 0;
-  top: 0px;
-  left: 0px;
-  width: 100%;
-  z-index: -2;
-}
+
 .quiz-container {
   position: relative;
   margin: 0;
@@ -174,6 +167,8 @@ main {
   margin: auto;
   border-radius: 8px;
   animation: fadeIn ease-out 1s;
+  display: grid;
+  grid-template-columns: 1fr;
 }
 .question-title {
   font-family: "Karla", sans-serif;
@@ -181,12 +176,13 @@ main {
   border-radius: 8px;
   box-shadow: -2px 4px 6px 0px rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
-  max-width: 50rem;
+  max-width: 100%;
   text-align: start;
 }
-.question-title-text {
-  text-transform: uppercase;
-  color: #00ffbf;
+
+.question-title-identifier + span {
+  display: inline-block;
+  vertical-align: top;
 }
 
 .answer-label {
@@ -201,12 +197,13 @@ main {
   max-width: 90vw;
   border: 0.8px solid #4d5b9e;
   border-radius: 7.94239px;
+  backdrop-filter: blur(50%);
 }
 .answer-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-evenly;
   gap: 2rem;
   align-items: center;
 }

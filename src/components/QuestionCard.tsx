@@ -3,6 +3,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCircleCheck,
   faCircleXmark,
+  faCircleQuestion,
 } from "@fortawesome/free-regular-svg-icons";
 
 export const QuestionCard = (props: QuestionCardProps) => {
@@ -82,7 +83,13 @@ export const QuestionCard = (props: QuestionCardProps) => {
   return (
     <div className="question-card">
       <h4 className="question-title">
-        <span className="question-title-text">Q:</span> {props.question}
+        <span className="question-title-identifier">
+          <FontAwesomeIcon
+            icon={faCircleQuestion}
+            style={{ color: "#06dbfb" }}
+          />
+        </span>{" "}
+        <span className="question-title-text">{props.question}</span>
       </h4>
       {renderAnswers()}
     </div>
