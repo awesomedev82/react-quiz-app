@@ -55,7 +55,6 @@ export default function Categories(props: CategoriesProps) {
       >
         {selectOptionElements}
       </select>
-      <br />
     </div>
   );
 }

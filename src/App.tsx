@@ -9,6 +9,7 @@ function App() {
   const [isShowingQuiz, setIsShowingQuiz] = useState(false);
   const [numberOfQuestions, setNumberOfQuestions] = useState(5);
   const [categoryId, setCategoryId] = useState(-1);
+  const [difficulty, setDifficulty] = useState("any");
   const handleQuizShow = (show: boolean) => {
     setIsShowingQuiz(show);
   };
@@ -18,6 +19,9 @@ function App() {
   const handleCategoryChange = (categoryId: number) => {
     setCategoryId(categoryId);
   };
+  const handleDifficultyChange = (difficulty: string) => {
+    setDifficulty(difficulty);
+  };
   return (
     <>
       <main>
@@ -26,6 +30,7 @@ function App() {
             handleQuizShow={handleQuizShow}
             numberOfQuestions={numberOfQuestions}
             categoryId={categoryId}
+            difficulty={difficulty}
           />
         ) : (
           <LandingPage
@@ -34,6 +39,8 @@ function App() {
             handleNumberOfQuestions={handleNumberOfQuestions}
             handleCategoryChange={handleCategoryChange}
             categoryId={categoryId}
+            difficulty={difficulty}
+            handleDifficultyChange={handleDifficultyChange}
           />
         )}
         <div className="svg-logo-container">

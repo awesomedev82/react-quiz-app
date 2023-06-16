@@ -1,6 +1,7 @@
 import { Player } from "@lottiefiles/react-lottie-player";
 import reactLogo from "../assets/react.svg";
 import Categories from "./Categories";
+import Difficulty from "./Difficulty";
 
 export default function Landing(props: LandingProps) {
   const [min, max] = [1, 50];
@@ -54,6 +55,10 @@ export default function Landing(props: LandingProps) {
             min({min}) - max({max})
           </small>
         </label>
+        <Difficulty
+          difficulty={props.difficulty}
+          handleDifficultyChange={props.handleDifficultyChange}
+        />
         <Categories
           handleCategoryChange={props.handleCategoryChange}
           categoryId={props.categoryId}
@@ -74,4 +79,6 @@ type LandingProps = {
   handleNumberOfQuestions: (numberOfQuestions: number) => void;
   handleCategoryChange: (categoryId: number) => void;
   categoryId: number;
+  difficulty: string;
+  handleDifficultyChange: (difficulty: string) => void;
 };

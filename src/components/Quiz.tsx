@@ -39,7 +39,7 @@ export default function Quiz(props: QuizProps) {
 
   useEffect(() => {
     let isCancelled = false;
-    setQuizFromApi(isCancelled);
+    fetchQuizFromApi(isCancelled);
     return () => {
       isCancelled = true;
     };
@@ -64,12 +64,14 @@ export default function Quiz(props: QuizProps) {
       handleNextPage();
     }, 200);
   }
-  const setQuizFromApi = async (isCancelled: boolean) => {
+  const fetchQuizFromApi = async (isCancelled: boolean) => {
     try {
       if (!isCancelled) {
         const response = await fetch(
           `https://opentdb.com/api.php?amount=${props.numberOfQuestions}${
             props.categoryId === -1 ? "" : `&category=${props.categoryId}`
+          }${
+            props.difficulty === "any" ? "" : `&difficulty=${props.difficulty}`
           }`
         );
         const responseData = await response.json();
@@ -191,7 +193,7 @@ export default function Quiz(props: QuizProps) {
       percentage,
     });
   }
-  console.log(width, height);
+
   return (
     <div className="quiz-wrapper">
       {score.percentage === 100 && <Confetti width={width} height={height} />}
@@ -285,4 +287,5 @@ type QuizProps = {
   handleQuizShow: (show: boolean) => void;
   numberOfQuestions: number;
   categoryId: number;
+  difficulty: string;
 };
