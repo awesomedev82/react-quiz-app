@@ -324,7 +324,7 @@ button[disabled]:hover {
     fill: #ebe832;
   }
   .back-button {
-    background: #cac4c4;
+    background: #cac4c4b0;
     color: #293264;
   }
   .score-text {
@@ -386,8 +386,8 @@ button[disabled]:hover {
       brightness(106%) contrast(100%);
   }
   .back-button {
-    background: #cac4c4;
-    color: #293264;
+    background: #1c475ee8;
+    color: #fff;
   }
   .score-text {
     background-color: rgba(53, 53, 53, 0.479);
