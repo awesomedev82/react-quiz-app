@@ -88,8 +88,8 @@ export default function Quiz(props: QuizProps) {
             ),
           })
         );
-        const quizzArray = generateArrayForQuizQuestions(decodedResults);
-        setQuizQuestions(quizzArray);
+        const quizArray = generateArrayForQuizQuestions(decodedResults);
+        setQuizQuestions(quizArray);
       }
     } catch (error) {
       console.error(error);
@@ -99,7 +99,7 @@ export default function Quiz(props: QuizProps) {
     results: QuizResponseDto[]
   ): QuizQuestion[] => {
     const quizQuestions: QuizQuestion[] = [];
-    for (let i = 0; i < results.length; i++) {
+    for (const element of results) {
       const {
         id = nanoid(),
         category,
@@ -108,7 +108,7 @@ export default function Quiz(props: QuizProps) {
         question,
         correct_answer,
         incorrect_answers,
-      } = results[i];
+      } = element;
       const answers = combineAnswers(
         id,
         question,
