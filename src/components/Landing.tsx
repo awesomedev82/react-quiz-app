@@ -9,7 +9,7 @@ export default function Landing(props: LandingProps) {
   return (
     <div className="landing-container">
       <h1 className="landing-title">
-        Quizz Site
+        Quiz Site
         <img className="react-logo" src={reactLogo} />
       </h1>
       <Player
@@ -68,7 +68,7 @@ export default function Landing(props: LandingProps) {
         className="start-button"
         onClick={() => props.handleQuizShow(true)}
       >
-        Start Quizz
+        Start Quiz
       </button>
     </div>
   );

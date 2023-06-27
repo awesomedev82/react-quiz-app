@@ -1,4 +1,4 @@
-# Quizz Site made with React
+# Quiz Site made with React
 
 I built this app to learn React
 
