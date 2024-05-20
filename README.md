@@ -4,7 +4,7 @@ I built this app to learn React
 
 ## Live demo
 
-Github Pages :rocket: : https://abi-rai.github.io/QuizSiteReact/
+:rocket: : [Click here](https://react-quiz-app-sooty.vercel.app)
 
 ## Built With
 
