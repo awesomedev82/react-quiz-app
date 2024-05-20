@@ -3,7 +3,7 @@ import react from "@vitejs/plugin-react";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: "https://abi-rai.github.io/QuizSiteReact",
+  base: "https://react-quiz-app-sooty.vercel.app",
   plugins: [react()],
   server: {
     watch: {
